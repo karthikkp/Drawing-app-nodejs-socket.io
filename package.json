@@ -1,0 +1,15 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.4",
+    "jade": "*",
+    "connect-redis": "~1.4.5",
+    "cookie": "0.0.5",
+    "connect": "~2.7.2"
+  }
+}

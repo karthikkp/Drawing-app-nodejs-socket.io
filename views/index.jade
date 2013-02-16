@@ -1,0 +1,34 @@
+doctype 5
+html
+  head
+    title "New User"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(class='preview',id='top')
+   section(id='header')
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          h2 Multi-Room Drawing Application
+          h3 by
+          h1(class='head')
+           a(href='karthik') Karthik Priyadarshan
+   section(id='draw')
+    #chat
+     canvas(width='500px',height='400px',id='canvas') 
+    #welcome
+      #button	
+       button(id='set',class='btn btn-large btn-warning') Set Nickname
+   #room-list.well
+    ul(id='rooms',class='nav nav-list')
+     li(class='nav-header') Rooms
+    a(id='new-room') new room
+   script(type='text/javascript',src='http://code.jquery.com/jquery-1.9.1.min.js')
+   script(type='text/javascript',src='javascripts/chat.js')
+   script(type='text/javascript',src='socket.io/socket.io.js')
+   script(type='text/javascript',src='javascripts/easeljs-0.5.0.min.js')
+
+   
+    
+
+
+

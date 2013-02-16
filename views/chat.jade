@@ -1,0 +1,11 @@
+doctype 5
+html
+  head
+   link(rel='stylesheet', href='/stylesheets/style.css')
+   script(type='text/javascript',src="/socket.io/socket.io.js")
+   script(type='text/javascript',src='javascripts/easeljs-0.5.0.min.js')
+   title "chat app"
+  body
+   a(href='/new_room') Create New Room
+   canvas(id='canvas',width='640px',height='480px')
+   script(type='text/javascript',src='javascripts/chat.js')
