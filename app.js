@@ -8,16 +8,14 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path')
-  , sessionstore = express.session.MemoryStore
-  , cookieParse = require('cookie');
+  , path = require('path');
 
 
 
 var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
-var store = new sessionstore();
+
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -28,7 +26,6 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({secret:'abcd',key:'express.sid',store:store}));
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
 });
