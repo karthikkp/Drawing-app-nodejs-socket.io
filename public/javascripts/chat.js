@@ -132,7 +132,7 @@ var init = function(){
 function setNickName(){
 	var nickName = prompt("Please choose a nickname?");
 	if(nickName){
-		socket = io.connect('http://localhost:3000');
+		socket = io.connect();
 		socket.emit('new_user',nickName);
 		$("#welcome").remove();
 		$("#holder").css('visibility','visible');
